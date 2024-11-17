@@ -39,7 +39,7 @@ provider "kubernetes" {
 }
 
 locals {
-  name   = "getting-started-gitops"
+  name   = "ali-play"
   region = var.region
 
   cluster_version = var.kubernetes_version
@@ -200,7 +200,7 @@ module "eks" {
 
   eks_managed_node_groups = {
     initial = {
-      instance_types = ["m5.large"]
+      instance_types = ["t3.medium"]
 
       min_size     = 1
       max_size     = 3
